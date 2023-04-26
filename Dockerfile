@@ -4,8 +4,8 @@ WORKDIR /app
 COPY files/* /app/
 
 # 创建一个 UID 为 1001，GID 为 1001 的非 root 用户
-RUN groupadd -g 1001 myuser && \
-    useradd -u 1001 -g 1001 -m -s /bin/bash myuser
+RUN groupadd -g 10014 myuser && \
+    useradd -u 10014 -g 10014 -m -s /bin/bash myuser
 
 # 设置工作目录并切换到非 root 用户
 WORKDIR /app
